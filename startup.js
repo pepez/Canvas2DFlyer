@@ -19,6 +19,8 @@
 // petteri.hietavirta@gmail.com
 //
 
+
+// Get the Canvas element and create a game with it.
 function init() {
     canvas = document.getElementById('gameCanvas');
     ctx = canvas.getContext('2d');

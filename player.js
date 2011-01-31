@@ -50,7 +50,7 @@ function Player(x, y) {
         x = x + velo_x*dt + 0.5*force_x*dt*dt;
         y = y + velo_y*dt + 0.5*force_y*dt*dt;
 
-        // Borders
+        // Border checking, move player to the opposite site if necessary.
         if (x > canvas.width+10) {
             x = 0;
         } else if (x < -10) {
@@ -67,11 +67,13 @@ function Player(x, y) {
 
         direction = direction + diff*dt;
 
+        // Set new values for the transformation matrix based on the direction.
         matrix[0][0] = playerScale*Math.cos(direction);
         matrix[0][1] = playerScale*Math.sin(direction)*-1;
         matrix[1][0] = playerScale*Math.sin(direction);
         matrix[1][1] = playerScale*Math.cos(direction);
     }
+    
     this.reset = function() {
         velo_x = 0.0;
         velo_y = 0.0;
@@ -80,6 +82,7 @@ function Player(x, y) {
         force_x = 0.0;
         force_y = 0.0;
     }
+    
     this.getVertices = function() {
         return vertices;
     }
@@ -95,6 +98,7 @@ function Player(x, y) {
     this.getMatrix = function() {
         return matrix;
     }
+    
     this.setForce_y = function(fy) {
         force_y = fy;
     }
