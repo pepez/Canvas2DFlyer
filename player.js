@@ -61,7 +61,7 @@ function Player(x, y) {
             y = 0;
         }
 
-        // Calculate new velocity components
+        // Calculate new velocity components - suitable for constant velocity only.
         velo_x = velo_x + force_x * dt;
         velo_y = velo_y + force_y * dt;
 
