@@ -1,5 +1,5 @@
 Simple HTML5 Canvas game tutorial
 
-This tutorial explains how to draw graphics on the Canvas, how to calculate movements based on input and how to construct a game loop.
+This tutorial explains how to draw graphics on the Canvas, how to calculate movements based on the user input and how to construct a basic game loop.
 
 Petteri Hietavirta
