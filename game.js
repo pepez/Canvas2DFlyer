@@ -130,6 +130,6 @@ function Game(ctx1, height, width) {
     this.startGame = function() {
         ctx.fillStyle = "#CCCCCE";
         ctx.strokeStyle = "#ACACAC";
-        setInterval(gameStep, SECONDS_BETWEEN_FRAMES*1000);
+        setInterval(gameStep, SECONDS_BETWEEN_FRAMES*1000); // replace with requestAnimFrame 
     }
 }
